@@ -1,9 +1,10 @@
 # PARCIAL 2
 #### Hecho por: Daniel Santiago Gómez Zabala
 
-Se va a crear la siguiente arquitectura, usando una tres instancias EC2 de AWS, dos de esas instancias albergarán los MathServices y la otra el proxy, prviamnete se tuvo que instalar java en las máquinas junto con maven para poder hacer la ejecución del servicio.
+Se va a crear la siguiente arquitectura, usando una tres instancias EC2 de AWS, dos de esas instancias albergarán los MathServices y la otra el proxy, prviamnete se tuvo que instalar java en las máquinas junto con maven y git para poder hacer la ejecución del servicio.
 
 ![](img/arquitetcura.png)
+
 ## GETTING STARTED
 
 1. Debe tener instalado Maven en su computador para poder ejecutar los comandos que se le indicarán más adelante.
@@ -73,20 +74,19 @@ Debe tener previamente instalado maven, java y git en la instancia para poder re
 1. Abra tres veces la instancia de AWS y clone el repositorio con el siguiente enlace
 
     ```
-    https://github.com/sagomezab/Taller7_AREP.git
+    git clone https://github.com/sagomezab/Parcial2_AREP.git
     ```
 
-2. Ejecute las clases involucradas para el funcionamiento del sistema con lo siguientes comandos (*Reecuerde realizar mvn package antes de ejecutar las clases*):
+2. Ejecute las clases involucradas para el funcionamiento del sistema con lo siguientes comandos (*Reecuerde realizar mvn package o mvn clean install antes de ejecutar las clases*):
 
     ```
     java -cp "target/classes:target/dependency/*" edu.escuelaing.arem.ASE.app.MathService
 
     java -cp "target/classes:target/dependency/*" edu.escuelaing.arem.ASE.app.Proxy
     ```
+    Se debe ver de la siguiente manera en la ejecución en las instancias de EC2
 
-    La ejecución dentro de la instancia debe verse de la siguiente forma:
-
-    ![](img/pruebaAWS.png)
+    ![](img/ejecucionAWS.png)
 
 3. Ingrese al siguiente enlace y compruebe el funcionamiento, en el value coloque el valor que desea y visualizará el resultado
 
@@ -94,6 +94,13 @@ Debe tener previamente instalado maven, java y git en la instancia para poder re
     http://ec2-34-238-117-198.compute-1.amazonaws.com:4567/factors?value=
     http://ec2-34-238-117-198.compute-1.amazonaws.com:4567/primes?value=
     ```
+
+    Debe visualizar lo siguiente
+    ![](img/pruebaAWS.png)
+
+4. Se adjunta un imagen con las instancias creadas (3 instancias de EC2), dentro de las tres insnacias se instaló previamente java, git y maven para la ejecución de los servicios.
+
+    ![](img/instancias.png)
 
 ### Video
 
@@ -103,9 +110,6 @@ Debe tener previamente instalado maven, java y git en la instancia para poder re
 
 * [Maven](https://maven.apache.org/) - Administrador de dependencias
 
-## Version
-
-1.0
 ## Author
 
 Daniel Santiago Gómez Zabala [SAGOMEZAB](https://github.com/sagomezab)
