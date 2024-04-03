@@ -15,8 +15,8 @@ public class RoundRobin {
 
     private static final String USER_AGENT = "Mozilla/5.0";
     private static final String[] MATH_SERVICES = new String[]{
-        "http://ec2-44-210-88-28.compute-1.amazonaws.com:5001/",
-        "http://ec2-34-203-40-199.compute-1.amazonaws.com:5001/"
+        "http://ec2-3-80-149-91.compute-1.amazonaws.com:5001/",
+        "http://ec2-54-166-239-182.compute-1.amazonaws.com:5001/"
     };
     int instance = 0;
     public String invokeFactors(String args) throws IOException {

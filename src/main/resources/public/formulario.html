@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Math Opertaion</title>
+    <title>Math Operation</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -10,12 +10,16 @@
 <form>
     <label for="factors">Factors:</label><br>
     <input type="text" id="factors" name="factors" value=""><br><br>
-    <input type="button" value="Calculate Factors" onclick="factors()">
+    <input type="button" value="Calculate Factors" onclick="loadGetFactMsg()">
 </form>
+<div id="getrespmsg1"></div>
+
+<hr> <!-- Línea divisoria -->
+
 <form>
     <label for="primes">Primes:</label><br>
     <input type="text" id="primes" name="primes" value=""><br><br>
-    <input type="button" value="Calculate Primes" onclick="primes()">
+    <input type="button" value="Calculate Primes" onclick="loadGetPriMsg()">
 </form>
 <div id="getrespmsg"></div>
 

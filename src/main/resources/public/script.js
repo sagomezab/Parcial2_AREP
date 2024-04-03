@@ -1,15 +1,15 @@
-function factors() {
+function loadGetFactMsg() {
     let nameVar = document.getElementById("factors").value;
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
-           document.getElementById("getrespmsg").innerHTML =
+           document.getElementById("getrespmsg1").innerHTML =
            this.responseText;
     };
     xhttp.open("GET", "/factors?value="+nameVar);
     xhttp.send();
 }
 
-function primes() {
+function loadGetPriMsg() {
     let nameVar = document.getElementById("primes").value;
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
