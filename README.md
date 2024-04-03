@@ -47,7 +47,7 @@ Con los siguientes enlaces:
     http://localhost:4567/formulario.html
     ```
 
-    ![](IMG/pruebaLOCALform.png)
+    ![](img/pruebaLOCALform.png)
 
 * AWS
 
@@ -67,7 +67,7 @@ Con los siguientes enlaces:
     http://ec2-34-238-117-198.compute-1.amazonaws.com:4567/formulario.html
     ```
 
-    ![](IMG/pruebaAWSform.png)
+    ![](img/pruebaAWSform.png)
 
 
 ### Prueba Local
