@@ -31,6 +31,8 @@ Con los siguientes enlaces:
 
 * LOCAL
 
+    Para obtener directamente el js sin el cliente html y js ingrese con los siguientes enlaces
+
     ```
     http://localhost:4567/factors?value=15
     http://localhost:4567/factors?value=112
@@ -39,7 +41,17 @@ Con los siguientes enlaces:
 
     ![](img/pruebaLOCAL.png)
 
+    Para ingresar con el formulario debe ingresar de la siguiente manera
+
+    ```
+    http://localhost:4567/formulario.html
+    ```
+
+    ![](IMG/pruebaLOCALform.png)
+
 * AWS
+
+    Para obtener directamente el js sin el cliente html y js ingrese con los siguientes enlaces
 
     ```
     http://ec2-34-238-117-198.compute-1.amazonaws.com:4567/factors?value=15
@@ -48,6 +60,14 @@ Con los siguientes enlaces:
     ```
 
     ![](img/pruebaAWS.png)
+
+    Para ingresar con el formulario debe ingresar de la siguiente manera
+
+    ```
+    http://ec2-34-238-117-198.compute-1.amazonaws.com:4567/formulario.html
+    ```
+
+    ![](IMG/pruebaAWSform.png)
 
 
 ### Prueba Local
@@ -98,13 +118,22 @@ Debe tener previamente instalado maven, java y git en la instancia para poder re
     Debe visualizar lo siguiente
     ![](img/pruebaAWS.png)
 
+    Para ingresar directamente con el formulario debe usar el siguiente enlace:
+
+    ```
+    http://ec2-34-238-117-198.compute-1.amazonaws.com:4567/formulario.html
+    ```
+
+    Visualizará lo siguiente:
+    ![](img/pruebaAWSform.png)
+
 4. Se adjunta un imagen con las instancias creadas (3 instancias de EC2), dentro de las tres insnacias se instaló previamente java, git y maven para la ejecución de los servicios.
 
     ![](img/instancias.png)
 
 ### Video
 
-* [Video Probatorio](https://youtu.be/4HkpLBX3y94)
+* [Video Probatorio](https://youtu.be/F0Qr3nJr5P4)
 
 ## Built With
 
