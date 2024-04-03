@@ -3,18 +3,32 @@ package edu.escuelaing.arem.ASE.app;
 import static spark.Spark.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class MathService {
     public static void main(String... args){
         port(getPort());
         get("/primes", (req,res) -> {
             Integer num = Integer.parseInt(req.queryParams("value"));
-
-            return "{ \"operation\" : \"factors\", \"input\" :" + num + ", \"output\" : \"" + calculatePrimes(num) + "\" }";
+            String outputAsString = calculatePrimes(num).stream()
+                                      .map(String::valueOf)
+                                      .collect(Collectors.joining(", "));
+            return "{\n" +
+                    "  \"operation\" :  \"primes\"  ,\n" +
+                    "  \"input\" : " + num + ",\n" +
+                    "  \"output\" : " + outputAsString + "\n" +
+                    "}";
         });
         get("/factors", (req,res) -> {
             Integer num = Integer.parseInt(req.queryParams("value"));
-            return "{ \"operation\" : \"factors\", \"input\" :" + num + ",  \"output\" : \"" + calculateFactors(num) + "\" }";
+            String outputAsString = calculateFactors(num).stream()
+                                      .map(String::valueOf)
+                                      .collect(Collectors.joining(", "));
+            return "{\n" +
+                    "  \"operation\" : \"factors\" ,\n" +
+                    "  \"input\" : " + num + ",\n" +
+                    "  \"output\" : " + outputAsString + "\n" +
+                    "}";
         });
     }
 

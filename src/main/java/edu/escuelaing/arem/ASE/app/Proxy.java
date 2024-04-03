@@ -7,6 +7,7 @@ public class Proxy {
     private static RoundRobin invoker = new RoundRobin();
 
     public static void main(String... args){
+        staticFileLocation("/public");
         port(getPort());
         get("/primes", (req,res) -> {
             res.type("application/json");
